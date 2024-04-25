@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='law_7.css')}} " />
+    <link rel="stylesheet" href="{{url_for('static', filename='appointment_7.css')}} " />
+
+    <script
+      src="https://kit.fontawesome.com/3182aa7256.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>KATWA WEBSITE</title>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-scale-balanced icon_header"></i>
+
+      <span class="header_text"><h2>KATWA & KEMBOY ADVOCATES</h2></span>
+    </header>
+    <nav class="nav_main">
+      <a href="/">
+        <div class="icon_nav">
+          <i class="fa-solid fa-house"></i>
+          <span class="icon_text">HOME</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="icon_nav">
+          <span class="icon_text">PRACTICE AREAS</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="icon_nav">
+          <span class="icon_text">SERVICES</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="icon_nav">
+          <span class="icon_text">CONTACT</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="flashed_messages">
+      {% with messages = get_flashed_messages()%}
+        {% if messages%}
+          {% for message in messages%}
+            <p>{{message}}</p>
+          {%endfor%}
+        {%endif%}
+      {%endwith%}
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      <h3>Contact Information</h3>
+      <div class="footer_content">
+        <div class="contact_info">
+          <h4>physical contact info</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <a href="https://maps.app.goo.gl/m2D9TNJxTpZhMcQ59">
+                <p>Nairobi, Kenya</p>
+                <p>Mama Ngina Street</p>
+                <p>Transnational plaza</p>
+                <p>5th Floor, Wing A</p>
+              </a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@katwakemboy.com">info@katwakemboy.com</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@katwakemboy.co.ke">info@katwakemboy.co.ke</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="+254 020 2251759">+254 020 2251759</a>
+            </li>
+            <li>
+              <i class="fas fa-fax"></i>
+              <a href="+254 020 251761">+254 020 251762</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social_media">
+          <h5>Follow Us</h5>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Katwa & Kemboy Advocates. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

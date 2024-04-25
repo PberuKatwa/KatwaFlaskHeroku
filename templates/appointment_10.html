@@ -1,0 +1,49 @@
+{% extends"layout_10.html" %}
+{% block content %}
+
+ <section>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>BOOK AN APPOINTMENT</legend>
+          {{ form.hidden_tag() }}
+          <div class="row">
+            <div class="column">
+             {{ form.client_name.label}}
+              {{ form.client_name}}
+            </div>
+            <div class="column">
+              {{ form.email.label }}
+              {{ form.email }}
+            </div>
+            <div class="column">
+              {{ form.phone.label }}
+              <input type="number" id="{{ form.phone.id }}"
+                     name="{{ form.phone.name }}">
+            </div>
+          </div>
+
+          <div class="practice_areas">
+            {{ form.legal_service.label }}
+            {{ form.legal_service }}
+          </div>
+
+          <div class="case_filed">
+            <div class="column">
+              {{ form.case_filed.label }}
+              {{ form.case_filed}}
+            </div>
+          </div>
+
+           <div class="additional_information">
+            <label for="additionalinformation">Additional Information</label>
+            <textarea id="additional-info" name="additional-info"></textarea>
+          </div>
+
+          <div class="form group">
+          {{ form.submit_appointment() }}
+        </div>
+        </fieldset>
+      </form>
+    </section>
+
+{% endblock%}

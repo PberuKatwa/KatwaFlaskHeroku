@@ -1,0 +1,50 @@
+.appointment_form{
+    background-color: #f6f5f431;
+    height: 600px;
+    width:97vw;
+    padding: 10px;
+    
+}
+
+.form_a {
+    max-width: 60vw;
+    margin: auto;
+    padding: 35px;
+    height: max-content;
+    border: 0.5px solid rgb(1, 9, 13);
+    border-radius: 20px;
+    background-color:rgba(159, 200, 219, 0.58) ;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.flashed_messages{
+    background-color:  #e5be6458;
+    color:  #0c0101d2;
+    height: max-content;
+    padding: 0.5px;
+    font-family: monospace;
+    text-align: center;
+    text-decoration: wavy;
+    min-height: fit-content;
+    font-weight: bolder;
+}
