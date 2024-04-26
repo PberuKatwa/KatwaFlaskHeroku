@@ -10,9 +10,11 @@ class AppointmentForm(FlaskForm):
                        validators=[DataRequired(), Length(max=25)])
     phone = IntegerField('Phone:', id='phone', validators=[DataRequired(),
                                                            NumberRange(max=999999999999999999999)])
-    legal_service = SelectField('Which legal service do you require:', choices=[(1, 'Criminal Law'),
-                                                                                (2, 'Constitutional Law'),
-                                                                                (3, 'International Law'),
-                                                                                (4, 'Succession Law')])
+    legal_service = SelectField('Which legal service do you require:', choices=[('Criminal Law', 'Criminal Law'),
+                                                                                ('Constitutional Law', 'Constitutional Law'),
+                                                                                ('International Law', 'International Law'),
+                                                                                ('Succession Law', 'Succession Law')])
     case_filed = BooleanField('Is your case already in court')
+    additional_information = TextAreaField('Additional Information',
+                                           validators=[Length(max=70)])
     submit_appointment = SubmitField('Book Appointment')
